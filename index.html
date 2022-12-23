@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="input.css">
+    <title>Document</title>
+</head>
+<body class="bg-white">
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Security</h1>
+            <ul class="items-container">
+                <li>Home</li><a href="#home"></a>
+                <li>About</li><a href="#about"></a>
+                <li>Services</li><a href="#services"></a>
+                <li></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section>
+        <!--Container to heading and blocks-->
+         <div class=" max-w-6xl px-5 mx-auto mt-32 text-center ">
+            <!--Heading-->
+            
+            <!--Password Container-->
+            <div class="password bg-gray-600 rounded-md flex flex-col mt-24 space-y-2">
+                <h2 class="text-4xl text-white font-bold text-center p-5 rounded-md space-y-3 ">
+                    Want to create random password?
+                </h2>
+                <!--Generate Section-->
+                <div  class=" flex text-black flex-row justify-around p-4 rounded-md ">
+                    <input class="px-5 py-4 mx-0" type="text" name="" placeholder="Create password" id="password" readonly>
+                    <button onclick="copyToClipboard()" id="copy" class=" mx-0 p-3 px-6 pt-2 text-white  rounded-md 
+                    hover:bg-gray-800 duration-500 ">Copy</button>
+                </div>
+                <div class="flex flex-col  p-10 space-y-8 bg-gray-600 rounded-md md:w-full">
+                    <div class="space-y-3">
+                        <div class="char-length flex flex-row justify-around">
+                            <h5 class="text-3xl font-bold text-white justify-start">Character Length</h5>
+                            <div id="output" class="bg-white p-2" >0</div>
+                        </div>
+                            <input id="range" class="slider" type="range" min="1" max="20" step="1" value="0" oninput="setOutput()">
+                            
+
+                    </div>
+
+                    <form class="form flex flex-col justify-evenly">
+                        <label for="cb1"> Include  Uppercase Letters
+                            <input class="in-range:border-green-500" id="capitalLetters" type="checkbox">
+                        </label><br>
+                        
+                        <label for="cb2"> Include  Lowercase Letters
+                            <input class="in-range:border-green-500" id="letters" type="checkbox" >
+                            <div class="toggler-slider">
+                                <div class="toggler-knob"></div>
+                            </div>
+                        </label><br>
+
+                        <label for="cb3"> Include Numbers
+                            <input id="numbers" type="checkbox" >
+                        </label><br>
+
+                        <label for="cb4"> Include Symbols
+                            <input id="chars" type="checkbox" >
+                        </label><br> 
+                      </form>
+                    
+                    <div class="my-16">
+                        <a href="#" id="confirmbtn" class="p-3 px-6 pt-2 space-x-5 text-white bg-green-500 rounded-md baseline
+                         hover:bg-gray-800 duration-500 ">
+                            Generate Password</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
