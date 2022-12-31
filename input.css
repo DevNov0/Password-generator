@@ -35,13 +35,21 @@
 }
 
 .nav-container{
-  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
   height: 80px;
-  display: flex;
-  z-index: 999;
+  border-radius: 0.375rem;
+  text-align: center;
   background-color: rgb(75 85 99);
-  justify-content: space-between;
 }
+.items-container{
+  padding-top: 25px;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  
+}
+
 nav ul{
   display: flex;
   align-items: center;
@@ -85,4 +93,12 @@ box-shadow: 0px 0px 42px 14px rgba(45,255,196,0.9);
 
 #copy:hover, #confirmbtn:hover{
   background-color: rgb(55 100 99)
+}
+
+@media(max-width: 768px){
+  .nav-container{
+    flex-wrap: wrap;
+  
+  
+  }
 }
